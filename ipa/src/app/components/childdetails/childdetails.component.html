@@ -1,0 +1,81 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="card border-primary border-3 justify-content-center my-3 py-2">
+                <div class="row justify-content-center">
+                    <h3 class="text-center py-2">Child Details</h3>
+                </div>
+                <div class="card-body">
+                    <form [formGroup]="userLoginForm" (ngSubmit)="addChildDetail()">
+                        <div class="col-md-12">
+                            <label class="form-label">Case Id</label>
+                            <input type="number" class="form-control" formControlName="caseid">
+                            <span *ngIf="caseid && caseid.invalid && caseid.touched" class="text-danger">invalid Case
+                                Id</span>
+                        </div>
+                        
+                        <div class="col-md-12">
+                            <label class="form-label">individual's Name</label>
+                            <input type="text" class="form-control" formControlName="empName">
+                            <span *ngIf="empName && empName.invalid && empName.touched" class="text-danger">invalid
+                                empName</span>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label class="form-label">Child Name</label>
+                            <input type="text" class="form-control" formControlName="childName">
+                            <span *ngIf="childName && childName.invalid && childName.touched" class="text-danger">invalid
+                                childName</span>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label class="form-label">Child Gender</label><br>
+                            <input type="radio" class="form-check-input me-2" name="childGender" value="Mail" formControlName="childGender">
+                            <label class="form-label me-2" >Mail</label>
+                            <input type="radio" class="form-check-input me-2" name="childGender" value="Femail" formControlName="childGender">
+                            <label class="form-label me-1">Femail</label>
+                            <span *ngIf="childGender && childGender.invalid && childGender.touched" class="text-danger">invalid
+                                Child Gender</span>
+                        </div>
+                        <div class="col-md-12">
+                            <label class="form-label">Aadhar No</label>
+                            <input type="number" class="form-control" formControlName="aadharNo">
+                            <span *ngIf="aadharNo && aadharNo.invalid && aadharNo.touched" class="text-danger">invalid
+                                Aadhar No</span>
+                        </div>
+
+                        <div class="col-md-12 mt-2 d-grid gap-2">
+                            <button type="submit" [disabled]="userLoginForm.invalid"
+                                class="btn btn-primary btn-xl">Add</button>
+                        </div>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="row pb-5">
+        <div class="col-md-12">
+            <table class="table table-hover mb-5">
+                <thead>
+                  <tr>
+                    <th scope="col">Sr No</th>
+                    <th scope="col">Child Name</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">DOB</th>
+                    <th scope="col">Aadhar No</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of userData">
+                    <th scope="row">1</th>
+                    <td>a</td>
+                    <td>b</td>
+                    <td>c</td>
+                    <td>c</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div> -->
+</div>

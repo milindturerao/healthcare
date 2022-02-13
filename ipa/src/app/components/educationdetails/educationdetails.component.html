@@ -1,0 +1,58 @@
+<div class="container my-2">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="card border-primary border-3 justify-content-center my-3 py-2">
+                <div class="row justify-content-center">
+                    <h3 class="text-center py-2">Education Details</h3>
+                </div>
+                <div class="card-body">
+                    <form [formGroup]="userLoginForm" (ngSubmit)="addChildDetail()">
+                        <div class="col-md-12">
+                            <label class="form-label">Case Id</label>
+                            <input type="number" class="form-control" formControlName="caseid">
+                            <span *ngIf="caseid && caseid.invalid && caseid.touched" class="text-danger">invalid Case
+                                Id</span>
+                        </div>
+                        
+                        <div class="col-md-12">
+                            <label class="form-label">individual's Name</label>
+                            <input type="text" class="form-control" formControlName="empName">
+                            <span *ngIf="empName && empName.invalid && empName.touched" class="text-danger">invalid
+                                empName</span>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label class="form-label">Highest QuaUfication</label>
+                            <input type="number" class="form-control" placeholder="10+2" formControlName="hq">
+                            <span *ngIf="hq && hq.invalid && hq.touched" class="text-danger">invalid
+                                hq</span>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label class="form-label">Completed Year</label><br>
+                            <input type="text" class="form-control"formControlName="cmpYear">
+                            <span *ngIf="cmpYear && cmpYear.invalid && cmpYear.touched" class="text-danger">invalid
+                                Completed Year</span>
+                        </div>
+                        <div class="col-md-12">
+                            <label class="form-label">Grade</label>
+                            <select class="form-select" id="validationServer04" formControlName="grade" required>
+                                <option selected disabled value="">enter your Grade...</option>
+                                <option value="A+">A+</option>
+                                <option value="B+">B+</option>
+                                <option value="C+">C+</option>
+                            </select>
+                            <span *ngIf="grade && grade.invalid && grade.touched" class="text-danger">invalid grade</span>
+                        </div>
+
+                        <div class="col-md-12 mt-2 d-grid gap-2">
+                            <button type="submit" [disabled]="userLoginForm.invalid"
+                                class="btn btn-primary btn-xl">Next</button>
+                        </div>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

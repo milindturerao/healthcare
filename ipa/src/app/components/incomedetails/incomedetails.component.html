@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="card border-primary border-3 justify-content-center my-5 py-4">
+                <div class="row justify-content-center">
+                    <h3 class="text-center py-2">Income Details</h3>
+                </div>
+                <div class="card-body">
+                    <form [formGroup]="userLoginForm" (ngSubmit)="userlogin()">
+                        <div class="col-md-12">
+                            <label class="form-label">Case Id</label>
+                            <input type="number" class="form-control" formControlName="caseid">
+                            <span *ngIf="caseid && caseid.invalid && caseid.touched" class="text-danger">invalid Case
+                                Id</span>
+                        </div>
+                        
+                        <div class="col-md-12">
+                            <label class="form-label">individual's Name</label>
+                            <input type="text" class="form-control" formControlName="empName">
+                            <span *ngIf="empName && empName.invalid && empName.touched" class="text-danger">invalid
+                                empName</span>
+                        </div>
+                        <div class="col-md-12">
+                            <label class="form-label">Is Working Employee</label><br>
+                            <input type="radio" class="form-check-input" name="empWork" value="yes" formControlName="empWork">
+                            <label class="form-label me-2" >Yes</label>
+                            <input type="radio" class="form-check-input" name="empWork" value="no" formControlName="empWork">
+                            <label class="form-label me-1">No</label>
+                            <span *ngIf="empWork && empWork.invalid && empWork.touched" class="text-danger">invalid
+                                empWork</span>
+                        </div>
+                        <div class="col-md-12">
+                            <label class="form-label">Other Income</label>
+                            <input type="number" class="form-control" formControlName="income">
+                            <span *ngIf="income && income.invalid && income.touched" class="text-danger">invalid
+                                Income</span>
+                        </div>
+
+                        <div class="col-md-12 py-2 d-grid gap-2">
+                            <button type="submit" [disabled]="userLoginForm.invalid"
+                                class="btn btn-primary btn-xl">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Application" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="Application">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="dropdown me-3">
+                <a class="text-decoration-none btn-outline-success p-2" id="ApplicationDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Application
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="ApplicationDropdown">
+                  <li><a class="dropdown-item" routerLink="registrationapp">Create Application</a></li>
+                  <li><a class="dropdown-item" >View Applications</a></li>
+                </ul>
+              </li>
+
+              
+              <li class="dropdown me-3">
+                  <a class="text-decoration-none btn-outline-success p-2" id="DataCollection" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Data Collection
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="DataCollection">
+                        <li><a class="dropdown-item" routerLink="createcase">Create Case</a></li>
+                        <li><a class="dropdown-item" href="#">View Cases</a></li>
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown me-3">
+                  <a class="text-decoration-none btn-outline-success p-2" id="AdminDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Admin
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="AdminDropdown">
+                    <li><a class="dropdown-item" routerLink="registration">Create Account</a></li>
+                    <li><a class="dropdown-item" href="#">View Accounts</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" routerLink="createPlan">Create Plan</a></li>
+                    <li><a class="dropdown-item" href="#">View Plans</a></li>
+                  </ul>
+                </li>
+
+              <li class="dropdown me-3">
+                <a class="text-decoration-none btn-outline-success p-2" id="logoutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  LogOut
+                </a>
+              </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>

@@ -1,0 +1,34 @@
+<div class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <div class="card border-primary border-3 justify-content-center py-5">
+          <div class="row justify-content-center">
+            <h3 class="text-center py-2">User Login</h3>
+          </div>
+                <div class="card-body">
+                  <form [formGroup]="userLoginForm" (ngSubmit)="userlogin()"> 
+                    <div class="mb-3">
+                      <label class="form-label">Email</label>
+                      <input type="email"class="form-control" formControlName="email">
+                      <span *ngIf="email && email.invalid && email.touched" class="text-danger">invalid Email</span>
+                  </div>
+                    <div class="mb-3">
+                      <label class="form-label">Password</label>
+                      <input type="password" class="form-control" formControlName="password">
+                      <span *ngIf="password && password.invalid && password.touched" class="text-danger">invalid Password</span>
+                    </div>
+                    <div class="col-md-12 mb-3 d-grid gap-2">
+                      <button type="submit" [disabled]="userLoginForm.invalid" class="btn btn-primary btn-xl">Submit</button>
+                    </div>
+                    <div class="col-md-12 mb-3">
+                      <a routerLink="/registration" class="me-4 text-decoration-none">Registration</a>
+                      <a routerLink="#" class="me-4 text-decoration-none">Forgot Password</a>
+                    </div>
+                  </form>
+                </div>
+              </div>
+          </div>
+      </div>
+  
+      
+  </div>

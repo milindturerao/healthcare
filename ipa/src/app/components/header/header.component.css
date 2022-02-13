@@ -1,0 +1,11 @@
+.btn-outline-success:hover {
+    background-color: steelblue !important;
+    color: white;
+    /* display: block;
+    margin-top: 0;  */
+ }
+
+ .btn-outline-success{
+     color: steelblue;
+ }
+

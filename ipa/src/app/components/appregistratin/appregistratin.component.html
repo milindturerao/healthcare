@@ -1,0 +1,77 @@
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <div class="card border-primary border-3">
+                <h3 class="text-center">Applicant Registration</h3>
+                <div class="card-body">
+                    <form [formGroup]="userLoginForm" (ngSubmit)="userlogin()" class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Fast Name</label>
+                            <input type="name" class="form-control form-control-sm" formControlName="fName">
+                            <span *ngIf="fName && fName.invalid && fName.touched" class="text-danger">invalid
+                                Name</span>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Last Name</label>
+                            <input type="name" class="form-control form-control-sm" formControlName="lName">
+                            <span *ngIf="lName && lName.invalid && lName.touched" class="text-danger">invalid
+                                Name</span>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" formControlName="email">
+                            <span *ngIf="email && email.invalid && email.touched" class="text-danger">invalid
+                                Email</span>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-control form-control-sm" formControlName="password">
+                            <span *ngIf="password && password.invalid && password.touched" class="text-danger">invalid
+                                Password</span>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label">Aadhar No</label>
+                            <input type="number" class="form-control form-control-sm" formControlName="aadhar">
+                            <span *ngIf="aadhar && aadhar.invalid && aadhar.touched" class="text-danger">invalid
+                                aadhar</span>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label">Contact</label>
+                            <input type="number" class="form-control form-control-sm" formControlName="contact">
+                            <span *ngIf="contact && contact.invalid && contact.touched" class="text-danger">invalid
+                                contact</span>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label">Date Of Birth</label>
+                            <input type="date" class="form-control form-control-sm" formControlName="dob">
+                            <span *ngIf="dob && dob.invalid && dob.touched" class="text-danger">invalid
+                                dob</span>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label me-3">Gender</label><br>
+                            <input type="radio" class="form-check-input me-1" name="gender" value="Male"
+                                formControlName="gender">
+                            <label class="form-label me-2">Male</label>
+                            <input type="radio" class="form-check-input me-1" name="gender" value="Female"
+                                formControlName="gender">
+                            <label class="form-label">Female</label>
+                            <span *ngIf="gender && gender.invalid && gender.touched" class="text-danger">invalid
+                                Gender</span>
+                            </div>
+                            
+                        <div class="col-md-12">
+                            <button type="submit" [disabled]="userLoginForm.invalid"
+                                class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

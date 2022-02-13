@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="card border-primary border-3 justify-content-center my-5 py-4">
+                <div class="row justify-content-center">
+                    <h3 class="text-center py-2">Select Plan</h3>
+                </div>
+                <div class="card-body">
+                    <form [formGroup]="userLoginForm" (ngSubmit)="userlogin()">
+                        <div class="col-md-12">
+                            <label class="form-label">Case Id</label>
+                            <input type="number" class="form-control" formControlName="caseid">
+                            <span *ngIf="caseid && caseid.invalid && caseid.touched" class="text-danger">invalid Case
+                                Id</span>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label class="form-label">Fast Name</label>
+                            <input type="text" class="form-control" formControlName="fName">
+                            <span *ngIf="fName && fName.invalid && fName.touched" class="text-danger">invalid
+                                fName</span>
+                        </div>
+                        <div class="col-md-12">
+                            <label class="form-label">Last Name</label>
+                            <input type="text" class="form-control" formControlName="lName">
+                            <span *ngIf="lName && lName.invalid && lName.touched" class="text-danger">invalid
+                                lName</span>
+                        </div>
+                        <div class="col-md-12">
+                            <label class="form-label">Plan</label>
+                            <select class="form-select" id="validationServer04" formControlName="role" required>
+                                <option selected disabled value="">enter your plan...</option>
+                                <option value="CCAP">CCAP</option>
+                                <option value="SNAP">SNAP</option>
+                                <option value="RIW">RIW</option>
+                            </select>
+                            <span *ngIf="role && role.invalid && role.touched" class="text-danger">invalid role</span>
+                        </div>
+                        <div class="col-md-12 py-2 d-grid gap-2">
+                            <button type="submit" [disabled]="userLoginForm.invalid"
+                                class="btn btn-primary btn-xl">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

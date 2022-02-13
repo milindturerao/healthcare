@@ -1,0 +1,12 @@
+=================================================================
+Navbar :-
+Application Registration --> 1. Create Application, 2. View Applications
+Admin --> 1 . Create Account, 2. View Accounts, 3. Create Plan, 4. View Plans
+Data Collection --> 1. Create Case, 2. View Cases
+=================================================================
+
+Create case -> Enter application id -> View case details -> Next -> Select Plan -> 
+Plans:
+1. CCAP
+2. SNAP
+3. RIW 

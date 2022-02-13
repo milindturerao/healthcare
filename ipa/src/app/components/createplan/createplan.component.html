@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="card border-primary border-3 justify-content-center my-5 py-4">
+                <div class="row justify-content-center">
+                    <h3 class="text-center py-1">Create Plan</h3>
+                </div>
+                <div class="card-body">
+                    <form [formGroup]="userLoginForm" (ngSubmit)="userlogin()">
+                        <div class="col-md-12">
+                            <label class="form-label">Plan Name</label>
+                            <input type="text" class="form-control" formControlName="planName">
+                            <span *ngIf="planName && planName.invalid && planName.touched" class="text-danger">invalid Case
+                                Id</span>
+                        </div>
+                        
+                        <div class="col-md-12">
+                            <label class="form-label">plan Descriptino</label>
+                            <textarea type="text" class="form-control" formControlName="planDesc"></textarea>
+                            <span *ngIf="planDesc && planDesc.invalid && planDesc.touched" class="text-danger">invalid
+                                planDesc</span>
+                        </div>
+                        <div class="col-md-12">
+                            <label class="form-label">Plan Start Date</label><br>
+                            <input type="date" class="form-control" formControlName="planStartDate">
+                            <span *ngIf="planStartDate && planStartDate.invalid && planStartDate.touched" class="text-danger">invalid
+                                planStartDate</span>
+                        </div>
+                        <div class="col-md-12">
+                            <label class="form-label">Plan End Date</label>
+                            <input type="number" class="form-control" formControlName="planEndDate">
+                            <span *ngIf="planEndDate && planEndDate.invalid && planEndDate.touched" class="text-danger">invalid
+                                planEndDate</span>
+                        </div>
+
+                        <div class="col-md-12 py-2 d-grid gap-2">
+                            <button type="submit" [disabled]="userLoginForm.invalid"
+                                class="btn btn-primary btn-xl">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
